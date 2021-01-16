@@ -66,18 +66,3 @@ p {
   display: inline;
   margin: 22px;
 }
-
-.profile-pic {
-  border-radius: 100%;
-  padding: 40px;
-  width: 40%;
-}
-
-.projects-list {
-  display: grid;
-  padding: 2rem;
-}
-
-.proj {
-  padding-bottom: 20px;
-}

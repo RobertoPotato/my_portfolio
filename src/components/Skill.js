@@ -44,7 +44,7 @@ const Skill = ({ image, title, text, onClick }) => {
       <Button onClick={onClick}>
         <StyledSkillCard>
           <SkillImage src={image} />
-          <h3>{title}</h3>
+          <Title>{title}</Title>
           <p>{text}</p>
         </StyledSkillCard>
       </Button>

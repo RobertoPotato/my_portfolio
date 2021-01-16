@@ -16,6 +16,7 @@ const StyledModal = Modal.styled`
   align-items: center;
   justify-content: center;
   background-color: #19294b;
+  border-radius: 5px;
 
   button{
     position: relative;
@@ -25,6 +26,12 @@ const StyledModal = Modal.styled`
     border: none;
     padding: 0.5rem;
     color: white;
+    border-radius: 5px;
+    transition: all 0.4s;
+  }
+
+  button:hover{
+    background-color: #29437a;
   }
 `;
 
@@ -33,7 +40,7 @@ export const Grid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-column-gap: 3rem;
   grid-row-gap: 3rem;
-  padding: 0 3rem 0;
+  padding: 0 6rem 0;
 `;
 
 export const StyledSectionTitle = styled.h2`
@@ -48,7 +55,7 @@ const SkillsList = () => {
   }
 
   return (
-    <div className='proj'>
+    <div>
       <StyledSectionTitle>My Skills Responsive grid</StyledSectionTitle>
       <StyledModal
         isOpen={isOpen}

@@ -12,12 +12,26 @@ const StyledHero = styled.div`
   }
 `;
 
+const StyledProfileImage = styled.img`
+  border-radius: 100%;
+  padding: 40px;
+  width: 60%;
+
+  @media (max-width: 480px) {
+    width: 80%;
+  }
+`;
+
 const Hero = () => {
   return (
     <div>
       <StyledHero>
         <h1>Hello, I'm Rob</h1>
-        <img className='profile-pic' src={profilePic} alt='robert-wabuti-img' />
+        <StyledProfileImage
+          className='profile-pic'
+          src={profilePic}
+          alt='robert-wabuti-img'
+        />
         <h2>A Mobile and Web developer</h2>
         <p>
           At vero eos et accusamus et iusto odio dignissimos ducimus qui
