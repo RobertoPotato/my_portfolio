@@ -1,19 +1,31 @@
 import React, { useState } from 'react';
-import Project from './Project';
+import Skill from './Skill';
 import eat from '../images/eating.svg';
 import sleep from '../images/sleep.svg';
 import code from '../images/code.svg';
 import repeat from '../images/repeat.svg';
 import styled from 'styled-components';
 import Modal from 'styled-react-modal';
+import SkillDetails from './SkillDetails';
 
 const StyledModal = Modal.styled`
-  width: 40rem;
+  width: 40%;
+  min-width: 40rem;
   height: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: #19294b;
+
+  button{
+    position: relative;
+    left: 100px;
+    bottom: 140px;
+    background-color: #1f325c;
+    border: none;
+    padding: 0.5rem;
+    color: white;
+  }
 `;
 
 export const Grid = styled.div`
@@ -21,10 +33,14 @@ export const Grid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-column-gap: 3rem;
   grid-row-gap: 3rem;
-  padding: 1rem;
+  padding: 0 3rem 0;
 `;
 
-const ProjectsList = () => {
+export const StyledSectionTitle = styled.h2`
+  margin: 3rem 4rem 1rem;
+`;
+
+const SkillsList = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleModal(e) {
@@ -33,35 +49,38 @@ const ProjectsList = () => {
 
   return (
     <div className='proj'>
-      <h2>My Skills Responsive grid</h2>
+      <StyledSectionTitle>My Skills Responsive grid</StyledSectionTitle>
       <StyledModal
         isOpen={isOpen}
         onBackgroundClick={toggleModal}
         onEscapeKeydown={toggleModal}
       >
-        <span>I am a modal!</span>
-        <button onClick={toggleModal}>Close me</button>
+        <SkillDetails
+          title='Detail Modal'
+          description='This shows the details'
+        />
+        <button onClick={toggleModal}>Close</button>
       </StyledModal>
       <Grid>
-        <Project
+        <Skill
           onClick={toggleModal}
           text='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, '
           image={eat}
           title='Eating'
         />
-        <Project
+        <Skill
           onClick={toggleModal}
           text='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, '
           image={sleep}
           title='Sleeping'
         />
-        <Project
+        <Skill
           onClick={toggleModal}
           text='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, '
           image={code}
           title='Coding'
         />
-        <Project
+        <Skill
           onClick={toggleModal}
           text='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, '
           image={repeat}
@@ -72,4 +91,4 @@ const ProjectsList = () => {
   );
 };
 
-export default ProjectsList;
+export default SkillsList;

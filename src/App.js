@@ -1,6 +1,6 @@
 import Nav from './components/Nav';
 import Hero from './Hero';
-import ProjectsList from './components/ProjectsList';
+import SkillsList from './components/SkillsList';
 import { ModalProvider } from 'styled-react-modal';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <ModalProvider>
         <Nav />
         <Hero />
-        <ProjectsList />
+        <SkillsList />
       </ModalProvider>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledProjectCard = styled.div`
+const StyledSkillCard = styled.div`
   border-radius: 0.5rem;
   background-color: #1f325c;
   padding: 0.5rem;
@@ -11,9 +11,13 @@ const StyledProjectCard = styled.div`
   &:hover {
     background-color: #29437a;
   }
+
+  p {
+    text-align: left;
+  }
 `;
 
-const ProjectImage = styled.img`
+const SkillImage = styled.img`
   width: 80%;
 `;
 
@@ -34,18 +38,18 @@ const Button = styled.button`
   }
 `;
 
-const Project = ({ image, title, text, onClick }) => {
+const Skill = ({ image, title, text, onClick }) => {
   return (
     <div styles='width: 100%; height: 100%;'>
       <Button onClick={onClick}>
-        <StyledProjectCard>
-          <ProjectImage src={image} />
+        <StyledSkillCard>
+          <SkillImage src={image} />
           <h3>{title}</h3>
           <p>{text}</p>
-        </StyledProjectCard>
+        </StyledSkillCard>
       </Button>
     </div>
   );
 };
 
-export default Project;
+export default Skill;
