@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Satisfy&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #19294b;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #f64c72;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+a:hover {
+  color: #edf5e1;
+}
+
+h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 5rem;
+  color: #edf5e1;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #edf5e1;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #f64c72;
+}
+
+p {
+  color: #edf5e1;
+}
+
+#logo {
+  float: left;
+  width: 60px;
+  height: 60px;
+}
+
+.navbar {
+  position: relative;
+  padding: 20px;
+}
+
+.nav-items-container {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.nav-items {
+  display: inline;
+  margin: 22px;
+}
+
+.hero {
+  margin-top: 60px;
+  padding: 60px;
+}
+
+.profile-pic {
+  border-radius: 100%;
+  padding: 40px;
+  width: 40%;
+}
+
+.projects-list {
+  display: grid;
+  padding: 2rem;
+}
+
+.proj {
+  padding-bottom: 20px;
+}
