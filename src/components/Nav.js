@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './images/crab.svg';
+import logo from '../images/crab.svg';
 
 const Nav = () => {
   return (

@@ -23,14 +23,27 @@ const Title = styled.h3`
   color: #f64c72;
 `;
 
-const Project = ({ image, title, text }) => {
+const Button = styled.button`
+  border: none;
+  background-color: #1f325c;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  &:active {
+    border: none;
+  }
+`;
+
+const Project = ({ image, title, text, onClick }) => {
   return (
     <div styles='width: 100%; height: 100%;'>
-      <StyledProjectCard>
-        <ProjectImage src={image} />
-        <h3>{title}</h3>
-        <p>{text}</p>
-      </StyledProjectCard>
+      <Button onClick={onClick}>
+        <StyledProjectCard>
+          <ProjectImage src={image} />
+          <h3>{title}</h3>
+          <p>{text}</p>
+        </StyledProjectCard>
+      </Button>
     </div>
   );
 };

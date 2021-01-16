@@ -1,13 +1,16 @@
-import Nav from './Nav';
+import Nav from './components/Nav';
 import Hero from './Hero';
-import ProjectsList from './ProjectsList';
+import ProjectsList from './components/ProjectsList';
+import { ModalProvider } from 'styled-react-modal';
 
 function App() {
   return (
     <div className='App'>
-      <Nav />
-      <Hero />
-      <ProjectsList />
+      <ModalProvider>
+        <Nav />
+        <Hero />
+        <ProjectsList />
+      </ModalProvider>
     </div>
   );
 }
