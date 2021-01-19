@@ -67,7 +67,7 @@ const SkillsList = () => {
 
   return (
     <div>
-      <StyledSectionTitle>My Skills Responsive grid</StyledSectionTitle>
+      <StyledSectionTitle>My Skills</StyledSectionTitle>
       <StyledModal
         isOpen={isOpen}
         onBackgroundClick={toggleModal}

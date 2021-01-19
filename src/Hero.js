@@ -31,10 +31,10 @@ const StyledHero = styled.div`
 
 const StyledProfileImage = styled.img`
   border-radius: 100%;
-  width: 50%;
+  width: 40%;
 
   @media (max-width: ${mediumDevices}px) {
-    width: 90%;
+    width: 60%;
   }
 
   @media (max-width: ${xSmallDevices}px) {

@@ -15,6 +15,16 @@ body {
   background-attachment: fixed;
   background-size: auto;
   text-align: center;
+  min-width: ${xSmallDevices - 10}px;
+  ::-webkit-scrollbar{
+    background-color: #19294b;
+    width: 0.5rem;
+  } 
+  ::-webkit-scrollbar-thumb{
+    background-color: #f64c72;
+    border-radius: 10px;
+    box-shadow: 20px 20px 10px #f64c72;
+  }
 }
 
 a {
