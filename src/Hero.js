@@ -1,23 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
 import profilePic from './images/man.svg';
+import { mediumDevices, xSmallDevices } from './breakpoints';
 
 const StyledHero = styled.div`
   margin-top: 4rem;
   padding: 4rem 4rem 0 4rem;
 
+  @media (max-width: ${mediumDevices}px) {
+    padding: 3rem 3rem 0 3rem;
+  }
+
+  @media (max-width: ${xSmallDevices}px) {
+    padding: 2rem 2rem 0 2rem;
+  }
+
   p {
     margin: 0 3rem;
     text-align: left;
+
+    @media (max-width: ${mediumDevices}px) {
+      margin: 0 0.5rem;
+    }
+
+    @media (max-width: ${xSmallDevices}px) {
+      margin: 0 0.1rem;
+    }
   }
 `;
 
 const StyledProfileImage = styled.img`
   border-radius: 100%;
-  padding: 40px;
-  width: 60%;
+  width: 50%;
 
-  @media (max-width: 480px) {
+  @media (max-width: ${mediumDevices}px) {
+    width: 90%;
+  }
+
+  @media (max-width: ${xSmallDevices}px) {
     width: 80%;
   }
 `;

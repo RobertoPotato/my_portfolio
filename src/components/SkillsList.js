@@ -7,6 +7,7 @@ import repeat from '../images/repeat.svg';
 import styled from 'styled-components';
 import Modal from 'styled-react-modal';
 import SkillDetails from './SkillDetails';
+import { mediumDevices, xSmallDevices } from '../breakpoints';
 
 const StyledModal = Modal.styled`
   width: 40%;
@@ -41,6 +42,16 @@ export const Grid = styled.div`
   grid-column-gap: 3rem;
   grid-row-gap: 3rem;
   padding: 0 6rem 0;
+
+  @media (max-width: ${mediumDevices}px) {
+    padding: 0 3rem 0;
+    grid-row-gap: 3rem;
+  }
+
+  @media (max-width: ${xSmallDevices}px) {
+    padding: 0 1rem 0;
+    grid-row-gap: 1rem;
+  }
 `;
 
 export const StyledSectionTitle = styled.h2`
