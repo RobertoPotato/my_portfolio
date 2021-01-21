@@ -11,8 +11,8 @@ function App() {
 
   return (
     <div className='App'>
+      <GlobalStyle />
       <ModalProvider>
-        <GlobalStyle />
         {/*    */}
         {showMobileNav ? (
           <NavMobile hideNav={() => setShowMobileNav(!showMobileNav)} />

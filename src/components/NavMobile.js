@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { mediumDevices } from '../breakpoints';
+import { accentColorLight } from './constants';
 
 const NavItemsContainer = styled.ul`
+  margin: 0;
   transition: 0.4s all;
-
+  background-color: ${accentColorLight};
+  border-radius: 0 0 10px 10px;
   @media (max-width: ${mediumDevices}px) {
   }
 `;
@@ -12,6 +15,7 @@ const NavItemsContainer = styled.ul`
 const NavItem = styled.li`
   display: block;
   margin: 22px;
+  margin-top: 0;
 `;
 
 const NavMobile = ({ hideNav }) => {
