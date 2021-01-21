@@ -46,16 +46,18 @@ const NavItem = styled.li`
   margin: 22px;
 `;
 
-const Nav = () => {
+const Nav = ({ showNav }) => {
   return (
     <div>
       <NavBar>
         <Logo id='logo' src={logo} alt='logo-img' />
-        <HamburgerMenu>
-          <HamburgerSlice />
-          <HamburgerSlice />
-          <HamburgerSlice />
-        </HamburgerMenu>
+        <button onClick={showNav}>
+          <HamburgerMenu>
+            <HamburgerSlice />
+            <HamburgerSlice />
+            <HamburgerSlice />
+          </HamburgerMenu>
+        </button>
         <NavItemsContainer className='nav-items-container'>
           <NavItem>
             <a href='#'>Home</a>

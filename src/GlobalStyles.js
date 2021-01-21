@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { smallDevices, xSmallDevices, mediumDevices } from './breakpoints';
+import { xSmallDevices, mediumDevices } from './breakpoints';
 
 const GlobalStyle = createGlobalStyle`
 
