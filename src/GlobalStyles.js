@@ -1,5 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import { xSmallDevices, mediumDevices } from './breakpoints';
+import {
+  lightColor,
+  primaryColor,
+  secondaryColor,
+} from './components/constants';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -10,38 +15,38 @@ const GlobalStyle = createGlobalStyle`
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #19294b;
+  background-color: ${primaryColor};
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto;
   text-align: center;
   min-width: ${xSmallDevices - 10}px;
   ::-webkit-scrollbar{
-    background-color: #19294b;
+    background-color: ${primaryColor};
     width: 0.5rem;
   } 
   ::-webkit-scrollbar-thumb{
     background-color: #f64c72;
     border-radius: 10px;
-    box-shadow: 20px 20px 10px #f64c72;
+    box-shadow: 20px 20px 10px ${secondaryColor};
   }
 }
 
 a {
   text-decoration: none;
-  color: #f64c72;
+  color: ${secondaryColor};
   font-weight: bold;
   transition: all 0.5s;
 }
 
 a:hover {
-  color: #edf5e1;
+  color: ${lightColor};
 }
 
 h1 {
   font-family: 'Satisfy', cursive;
   font-size: 5rem;
-  color: #edf5e1; 
+  color: ${lightColor}; 
   
   @media (max-width: ${mediumDevices}px){
     font-size: 3.5rem;
@@ -54,7 +59,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  color: #edf5e1;
+  color: ${lightColor};
 
   @media (max-width: ${mediumDevices}px){
     font-size: 1.2rem;
@@ -68,7 +73,7 @@ h2 {
 h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
-  color: #f64c72;
+  color: ${secondaryColor};
 
   @media (max-width: ${mediumDevices}px){
     font-size: 1.0rem;
@@ -80,7 +85,7 @@ h3 {
 }
 
 p {
-  color: #edf5e1;
+  color: ${lightColor};
 }
 `;
 

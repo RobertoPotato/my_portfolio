@@ -7,7 +7,7 @@ import { ModalProvider } from 'styled-react-modal';
 import GlobalStyle from './GlobalStyles';
 
 function App() {
-  const [showMobileNav, setShowMobileNav] = useState(true);
+  const [showMobileNav, setShowMobileNav] = useState(false);
 
   return (
     <div className='App'>
@@ -15,7 +15,7 @@ function App() {
         <GlobalStyle />
         {/*    */}
         {showMobileNav ? (
-          <NavMobile />
+          <NavMobile hideNav={() => setShowMobileNav(!showMobileNav)} />
         ) : (
           <Nav showNav={() => setShowMobileNav(!showMobileNav)} />
         )}

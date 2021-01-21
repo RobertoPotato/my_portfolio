@@ -14,7 +14,7 @@ const NavItem = styled.li`
   margin: 22px;
 `;
 
-const NavMobile = () => {
+const NavMobile = ({ hideNav }) => {
   return (
     <NavItemsContainer className='nav-items-container'>
       <NavItem>
@@ -31,6 +31,9 @@ const NavMobile = () => {
       </NavItem>
       <NavItem>
         <a href='#'>Contact Me</a>
+      </NavItem>
+      <NavItem>
+        <button onClick={hideNav}>x</button>
       </NavItem>
     </NavItemsContainer>
   );

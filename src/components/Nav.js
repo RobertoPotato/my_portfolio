@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../images/crab.svg';
 import { mediumDevices } from '../breakpoints';
+import { secondaryColor, accentColorLight } from './constants';
 
 const NavBar = styled.div`
   position: relative;
@@ -26,7 +27,7 @@ const HamburgerMenu = styled.div`
 const HamburgerSlice = styled.div`
   width: 2.5rem;
   height: 5px;
-  background-color: #f64c72;
+  background-color: ${secondaryColor};
   margin: 0.7rem;
 `;
 
@@ -46,18 +47,30 @@ const NavItem = styled.li`
   margin: 22px;
 `;
 
+const NavButton = styled.button`
+  background-color: transparent;
+  border-style: none;
+  transition: 0.4s all;
+
+  &:hover {
+    background-color: ${accentColorLight};
+  }
+`;
+
 const Nav = ({ showNav }) => {
   return (
     <div>
       <NavBar>
         <Logo id='logo' src={logo} alt='logo-img' />
-        <button onClick={showNav}>
-          <HamburgerMenu>
+
+        <HamburgerMenu>
+          <NavButton onClick={showNav}>
             <HamburgerSlice />
             <HamburgerSlice />
             <HamburgerSlice />
-          </HamburgerMenu>
-        </button>
+          </NavButton>
+        </HamburgerMenu>
+
         <NavItemsContainer className='nav-items-container'>
           <NavItem>
             <a href='#'>Home</a>

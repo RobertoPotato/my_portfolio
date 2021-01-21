@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  secondaryColor,
+  accentColorLight,
+  accentColorLighter,
+} from './constants';
 
 const StyledSkillCard = styled.div`
   border-radius: 0.5rem;
-  background-color: #1f325c;
+  background-color: ${accentColorLight};
   padding: 0.5rem;
   min-width: 70%;
   transition: all 0.4s;
 
   &:hover {
-    background-color: #29437a;
+    background-color: ${accentColorLighter};
   }
 
   p {
@@ -24,12 +29,12 @@ const SkillImage = styled.img`
 const Title = styled.h3`
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
-  color: #f64c72;
+  color: ${secondaryColor};
 `;
 
 const Button = styled.button`
   border: none;
-  background-color: #1f325c;
+  background-color: ${accentColorLight};
   border-radius: 0.5rem;
   cursor: pointer;
 
